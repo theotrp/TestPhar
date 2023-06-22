@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000033; /* Fond bleu nuit */
+  overflow: hidden;
+  cursor: none; /* Masque le curseur par défaut */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.phare {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background-image: url('/home/shino/EKIP/test-phar/phare.png');
+  background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.caillou {
+    position: absolute;
+    top: 72%;
+    left: 42.5%;
+    width: 300px; /* Largeur du rectangle */
+    height: 500px; /* Hauteur du rectangle */
+    background-color: rgb(119, 114, 114); /* Couleur de fond du rectangle */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.light {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.8) 20%, transparent 100%); /* Lumière du phare */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Empêche l'élément de bloquer les événements de souris */
 }
